@@ -1,20 +1,20 @@
 import './App.css'
+import { useState } from 'react'
 import Weather from './Components/Weather'
 import SearchByCity from './Components/SearchByCity'
+import Switch from './Components/Switch'
+import Loader from './Components/Loader'
 
 function App() {
  
-
+  const [ isLoading, setIsLoading] = useState(true)
+  
   return (
     <>
-      <header>
-     <div className='header'>
-       <h1>Weather App</h1>
-       <input type='search' placeholder="🔍 Search by city"/>
-       <input type='chexbox'></input>
-        </div>
-     </header>
-      <Weather></Weather>
+      {isLoading && <Loader/>}
+      <Switch/>
+      <Weather
+      setIsLoading={setIsLoading}></Weather>
     </>
   )
 }

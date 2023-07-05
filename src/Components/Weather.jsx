@@ -10,7 +10,7 @@ import snow from '/src/assets/7.svg'
 import mist from '/src/assets/8.svg'
 import thunderstorm from '/src/assets/9.svg'
 
-const Weather = () => {
+const Weather = ({setIsLoading}) => {
 
 
     const [weather, setWeather] = useState({})
@@ -27,6 +27,10 @@ const Weather = () => {
            .then(response => {
             setWeather(response.data)
             setIcon(response.data.weather[0])
+
+            setTimeout(() => {
+                setIsLoading(false);
+              }, 500)
            })
            .catch(err => console.log(err))
            
@@ -73,12 +77,7 @@ const iconsWeather = () => {
     return (
 
         <>
-       
-     
-       
-
          <section>
-        
            <div className="card">
             <div className="content_card">
                  <h1>{ isCelsius ? celsius : fahr} {isCelsius ? "°C" : "°F"}</h1>
@@ -87,12 +86,10 @@ const iconsWeather = () => {
                 <h4>{icon.description}</h4>
                 <img src={iconsWeather()} alt="error loading icon"></img>
                 <h5>Pressure: {weather.main?.pressure}</h5>
-                <p>Humidity: {weather.main?.humidity}</p>
-                
+                <p>Humidity: {weather.main?.humidity}</p>       
             </div>
            </div>
            
-        
            <button className="changeUnits" onClick={fahrenheit}>{isCelsius? "Change to °F" : "Change to °C"}</button>
         </section>
         </>

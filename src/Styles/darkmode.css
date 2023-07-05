@@ -1,0 +1,10 @@
+[data-theme='dark'] {
+    --background-oneg: #53388F;
+    --background-twog: #2F2958;
+    --background-onec:  #5863B3;
+    --background-twoc: #5936B4;
+    --drop-shadowc: 0px 4.85px 4.85px rgba(0, 0, 0, 0.25);
+    --content-cardh: white;
+    --content-cardp: rgb(205, 201, 201);
+    --background-coloru: #7D69F1;
+}
