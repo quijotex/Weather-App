@@ -15,6 +15,7 @@ const Weather = () => {
 
     const [weather, setWeather] = useState({})
     const [icon, setIcon] = useState({})
+    const [ isCelsius, setisCelsius] = useState(true)
       
     useEffect(() => {
 
@@ -59,18 +60,41 @@ const iconsWeather = () => {
          return  icon.icon
         }         
 }
-const celsius = () => { let temper = Number(weather.main?.temp) 
-return Math.round(temper)}
+
+
+   
+    const fahrenheit = () => {
+        setisCelsius(!isCelsius)
+    }
+
+    const celsius = weather.main?.temp.toFixed(0)
+    const fahr = ((weather.main?.temp * 9 / 5) + 32).toFixed(0)
     
     return (
 
         <>
-           <p>{celsius()}</p>
-            <p>{weather.name}, {weather.sys?.country}</p>
+       
+     
+       
+
+         <section>
+        
+           <div className="card">
+            <div className="content_card">
+                 <h1>{ isCelsius ? celsius : fahr} {isCelsius ? "°C" : "°F"}</h1>
+                 <h2>{weather.name}, {weather.sys?.country}</h2>
+                <h3>{icon.main}</h3>
+                <h4>{icon.description}</h4>
+                <img src={iconsWeather()} alt="error loading icon"></img>
+                <h5>Pressure: {weather.main?.pressure}</h5>
+                <p>Humidity: {weather.main?.humidity}</p>
+                
+            </div>
+           </div>
            
-           <p>{icon.id}</p>
-           <p>{icon.main}</p>
-         <img src={iconsWeather()}></img>
+        
+           <button className="changeUnits" onClick={fahrenheit}>{isCelsius? "Change to °F" : "Change to °C"}</button>
+        </section>
         </>
     )
 
