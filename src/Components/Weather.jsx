@@ -79,14 +79,14 @@ const iconsWeather = () => {
     return (
         <>
         <section>
-           <div className="header-div">
-            <>Weather App</>
-            <div className="search">
+        <div className="header-div item-1">
+            <h3>Weather App</h3>
+            <div className="search item-2">
                 <SearchByCity
                 setWeather={setWeather}
                 setIcon={setIcon}/>
             </div>
-            <div className="switch">
+            <div className="switch item-3">
                 <Switch/>
             </div>
         </div>

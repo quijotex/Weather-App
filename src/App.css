@@ -30,17 +30,43 @@ body {
 }
 
 /*Header*/
-
 .header-div {
-        height: 200px;
+        height: 150px;
         display: flex;
-        flex-direction: row;
-        gap: 200px
-}
-.header-div span {
-    position: absolute;
+       margin-left: 220px;
+       gap: 190px                               
 }
 
+/*Search header*/
+.button-search {
+    background-color: var(--background-twog);
+    color: white;
+    padding: 3px;
+    border-radius: 10px 0px 0px 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.search {
+    left: 100px;
+}
+.label-input {
+    background-color: var(--background-twog);
+    padding: 3px;
+    border-radius: 0px 10px 10px 0px;
+    width: 490px;
+    height: 30px;
+    color: white;
+    border: none;
+}
+#inputId::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+.header-div h3 {
+    color: white;
+    left: 150px; 
+}
 /*Section card*/
 .card-section {
     display: flex;
@@ -114,26 +140,51 @@ body {
     border-radius: 4.85px; 
     cursor: pointer;
 }
-/*Search header*/
-.button-search{
-    background-color: var(--background-twog);
-    color: white;
-    padding: 3px;
-    border-radius: 10px 0px 0px 10px;
-    width: 30px;
-    height: 30px;
-    border: none;
+@media  screen and (max-width: 1024px) {
+   
+ .card {
+        width: 500px;
+        height: 280px; 
+    }
+    .header-div {
+       height: 100px;
+       margin-left: 150px;
+       gap: 100px                               
 }
 .label-input {
-    background-color: var(--background-twog);
-    padding: 3px;
-    border-radius: 0px 10px 10px 0px;
-    width: 490px;
-    height: 30px;
-    color: white;
-    border: none;
+    width: 440px;
 }
-#inputId::placeholder {
-    color: white;
-    font-size: 1rem;
+.header-div h3 {
+    left: 80px;
+}
+.content_card img {
+    width: 240px;
+    top: -80px;
+}
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+    .tittle {
+        margin-left: 1rem;   
+    }
+}
+@media screen and (max-width: 425px) {
+    body {
+        font-size: 10px;
+        padding: 15px; 
+    }
+    .tittle h1 {
+       font-size: 2.5rem;
+    }
+    .cookie {
+        padding: 2rem;
+    }
+}
+@media screen and (max-width: 375px) {
+    .tittle h1 {
+        font-size: 2rem;
+    }
 }
