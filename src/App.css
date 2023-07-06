@@ -28,6 +28,27 @@ body {
     align-items: center;
     font-family: 'Lato', sans-serif;
 }
+
+/*Header*/
+
+.header-div {
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        gap: 200px
+}
+.header-div span {
+    position: absolute;
+}
+
+/*Section card*/
+.card-section {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
 .card {
     background: linear-gradient(var(--background-onec) 0%, var(--background-twoc) 97.4%);
     filter: drop-shadow(var(--drop-shadowc));
@@ -81,11 +102,7 @@ body {
 .content_card p {
     top: 160px;
 }
-section {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-}
+/*Unit button*/
 .changeUnits {
     margin: auto;
     width: 178px;
@@ -96,4 +113,27 @@ section {
     border-style: none;
     border-radius: 4.85px; 
     cursor: pointer;
+}
+/*Search header*/
+.button-search{
+    background-color: var(--background-twog);
+    color: white;
+    padding: 3px;
+    border-radius: 10px 0px 0px 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.label-input {
+    background-color: var(--background-twog);
+    padding: 3px;
+    border-radius: 0px 10px 10px 0px;
+    width: 490px;
+    height: 30px;
+    color: white;
+    border: none;
+}
+#inputId::placeholder {
+    color: white;
+    font-size: 1rem;
 }

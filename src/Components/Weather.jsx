@@ -9,13 +9,15 @@ import rain from '/src/assets/6.svg'
 import snow from '/src/assets/7.svg'
 import mist from '/src/assets/8.svg'
 import thunderstorm from '/src/assets/9.svg'
+import SearchByCity from "./SearchByCity";
+import Switch from "./Switch";
 
 const Weather = ({setIsLoading}) => {
 
 
     const [weather, setWeather] = useState({})
     const [icon, setIcon] = useState({})
-    const [ isCelsius, setisCelsius] = useState(true)
+    const [ isCelsius, setIsCelsius] = useState(true)
       
     useEffect(() => {
 
@@ -68,16 +70,28 @@ const iconsWeather = () => {
 
    
     const fahrenheit = () => {
-        setisCelsius(!isCelsius)
+        setIsCelsius(!isCelsius)
     }
 
     const celsius = weather.main?.temp.toFixed(0)
     const fahr = ((weather.main?.temp * 9 / 5) + 32).toFixed(0)
     
     return (
-
         <>
-         <section>
+        <section>
+           <div className="header-div">
+            <>Weather App</>
+            <div className="search">
+                <SearchByCity
+                setWeather={setWeather}
+                setIcon={setIcon}/>
+            </div>
+            <div className="switch">
+                <Switch/>
+            </div>
+        </div>
+         </section>
+        <section className="card-section">
            <div className="card">
             <div className="content_card">
                  <h1>{ isCelsius ? celsius : fahr} {isCelsius ? "°C" : "°F"}</h1>
