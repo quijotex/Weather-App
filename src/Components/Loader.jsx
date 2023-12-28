@@ -1,4 +1,4 @@
-import cloudLoader from '../assets/cloudLoader.svg'
+import cloudLoader from '/cloudLoader.svg'
 
 const Loader = () => {
 
