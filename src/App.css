@@ -33,9 +33,15 @@ body {
 .header-div {
         height: 150px;
         display: flex;
-       margin-left: 220px;
-       gap: 190px                               
+         gap: 190px;                                    
 }
+.header-div h3 {
+    color: white; 
+}
+.title-weather {
+    width: 109px;
+}
+
 
 /*Search header*/
 .button-search {
@@ -63,10 +69,7 @@ body {
     color: white;
     font-size: 1rem;
 }
-.header-div h3 {
-    color: white;
-    left: 150px; 
-}
+
 /*Section card*/
 .card-section {
     display: flex;
@@ -148,15 +151,12 @@ body {
     }
     .header-div {
        height: 100px;
-       margin-left: 150px;
-       gap: 100px                               
+       gap: 80px                               
 }
 .label-input {
     width: 440px;
 }
-.header-div h3 {
-    left: 80px;
-}
+
 .content_card img {
     width: 240px;
     top: -80px;
@@ -171,55 +171,59 @@ body {
     width: 450px;
 }
 .header-div {
-   margin-left: 110px;
    gap: 70px                               
 }
 .label-input {
 width: 350px;
-}
-.header-div h3 {
-left: 40px;
 }
 .content_card img {
 width: 210px;
 top: -60px;
 }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
    body{ font-size: 14px;
 }
  .card {
     width: 380px;
 }
+
 .header-div {
    position: relative; 
-   top: 10px;                          
+   top: 10px;
+   left: 10px;    
+   gap: 0px;                      
 }
+
 .header-div h3 {
     top: -30px;
 }
 .search {
-    position: absolute;
     left: -65px;
     top: 10px;
 }
 .button-search {
     position: absolute;
-    right: 310px;
+    right: 359px;
 }
+
 .switch {
     position: absolute;
-    left: 100px;
-    top: -25px;
+    right: 10px;
+    top: -40px;
 }
 .label-input {
-width: 311px;
+    margin-left: 20px;
+}
+.title-weather {
+    position: absolute;
+    bottom: 180px;
 }
 .header-div h3 {
 left: 40px;
 }
 .content_card img {
-width: 180px;
+width: 160px;
 top: -30px;
 left: 230px;
 }
@@ -231,31 +235,40 @@ left: 230px;
     top: 232px;
 }
 }
+
 @media screen and (max-width: 375px) {
     .card {
-        width: 340px;
+        width: 300px;
         height: 280px;
-    }
+    } 
     .content_card img {
-        width: 150px;
-        left: 220px;
-    }
+        width: 110px;
+        left: 200px;
+    } 
     .content_card h1 {
-        font-size: 4.8rem;
+        font-size: 4rem;
     }
     .content_card h4 {
-        font-size: 1.1rem;
-        left: 220px;
+        font-size: 1rem;
+        left: 200px;
         top: 220px;
-    }
+    } 
     .switch {
-        left: 85px;
-        top: -24px;
-    }
+        right: 10px;
+        top: -30px;
+    } 
     .label-input {
-    width: 270px;
+    width: 250px;
     }
     .button-search {
-        right: 270px;
+        right: 280px;
     }
+    .title-weather {
+        position: absolute;
+        bottom: 140px;
+    }
+    .header-div h3 {
+    left: 40px;
+    }
+
 }

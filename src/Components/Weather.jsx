@@ -80,7 +80,10 @@ const iconsWeather = () => {
         <>
         <section>
         <div className="header-div item-1">
-            <h3>Weather App</h3>
+            <div className="title-weather">
+                <h3>Weather App</h3>
+            </div>
+          
             <div className="search item-2">
                 <SearchByCity
                 setWeather={setWeather}
